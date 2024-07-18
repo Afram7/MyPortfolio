@@ -13,12 +13,12 @@
 
 :root {
     --bg-color: #F3F2F0;
-    --second-bg-color: #cdf6ff;
+    --second-bg-color: #009ad6;
     --text-color: #000000;
-    --navbar-color: blue;
+    --navbar-color: #000288;
     --navbar-text-color: #000000;
     --navbar-second-text-color: #F3F2F0;
-    --main-color: #ff0059;
+    --main-color: #b30071;
 }
 
 html {
