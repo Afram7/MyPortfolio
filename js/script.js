@@ -153,7 +153,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     }
 
     if (isValidInformation(params)) {
-        alert("yeeeey")
-        // sendEmail(params)
+        sendEmail(params)
     }
 })
