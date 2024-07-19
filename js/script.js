@@ -1,14 +1,14 @@
-const MAX_NAME_LENGTH = 30
-const MAX_EMAIL_LENGTH = 50
-const MAX_PHONE_NUMBER_LENGTH = 20
+const MAX_NAME_LENGTH = 50
+const MAX_EMAIL_LENGTH = 100
+const MAX_PHONE_NUMBER_LENGTH = 15
 const MAX_SUBJECT_LENGTH = 50
 const MAX_MESSAGE_LENGTH = 5000
 
 const MIN_NAME_LENGTH = 2
 const MIN_EMAIL_LENGTH = 5
-const MIN_PHONE_NUMBER_LENGTH = 9
-const MIN_SUBJECT_LENGTH = 3
-const MIN_MESSAGE_LENGTH = 10
+const MIN_PHONE_NUMBER_LENGTH = 4
+const MIN_SUBJECT_LENGTH = 2
+const MIN_MESSAGE_LENGTH = 2
 
 
 // toggle icon navbar
@@ -89,7 +89,7 @@ document.getElementById("phone-number").addEventListener("input", function(e) {
 })
 
 document.getElementById("phone-number").addEventListener("keydown", function(e) {
-    if (e.key === "e" || e.key === "E" || e.key === "+" || e.key === "-") {
+    if (e.key === "e" || e.key === "E" || e.key === "+" || e.key === "-" || e.key === "." || e.key === ",") {
         e.preventDefault()
     }
 })
@@ -142,7 +142,7 @@ function isValidInformation(params) {
 }
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault() 
+    e.preventDefault()
 
     let params = {
         name: document.getElementById("name").value,
@@ -154,5 +154,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 
     if (isValidInformation(params)) {
         sendEmail(params)
+        //reloads the page
+        location.reload()
     }
 })
