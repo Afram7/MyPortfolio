@@ -61,8 +61,22 @@ window.onscroll = () => {
 }
 
 //EmailJS function to send the message via email
-function sendEmail(params) {
-    emailjs.send("service_d3xft8g", "template_j6qhgkw", params).then(alert("Your message has been sent!"))
+function sendEmail(form) {
+    const submitButton = document.getElementById("send-button");
+    submitButton.innerText = "Sending...";
+
+    const serviceID = "service_d3xft8g";
+    const templateID = "template_j6qhgkw";
+
+    emailjs.sendForm(serviceID, templateID, form)
+    .then(() => {
+        form.reset()
+        submitButton.innerText = "Send";
+        alert("Your message has been sent!");
+    }, (err) => {
+        submitButton.innerText = "Send";
+        alert("Error, try again later!");
+    });
 }
 
 //limitations
@@ -153,8 +167,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     }
 
     if (isValidInformation(params)) {
-        sendEmail(params)
-        //reloads the page
-        location.reload()
+        sendEmail(this)
     }
 })
