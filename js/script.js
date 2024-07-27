@@ -86,8 +86,8 @@ document.getElementById("name").addEventListener("input", function(e) {
     }
 })
 
-document.getElementById('name').addEventListener('input', function (e) {
-    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+document.getElementById("name").addEventListener("input", function (e) {
+    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
 });
 
 document.getElementById("email").addEventListener("input", function(e) {
@@ -170,3 +170,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         sendEmail(this)
     }
 })
+
+//automatically update the year in the footer
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = currentYear;

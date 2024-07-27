@@ -168,7 +168,7 @@ section {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 34.5rem;
+    width: 46.5rem;
     height: 5rem;
 }
 
@@ -195,16 +195,19 @@ section {
     color: var(--main-color);
 }
 
-.btn-box .btn:nth-child(2) {
+.btn-box .btn:nth-child(2),
+.btn-box .btn:nth-child(3) {
     background: transparent;
     color: var(--main-color);
 }
 
-.btn-box .btn:nth-child(2):hover {
+.btn-box .btn:nth-child(2):hover,
+.btn-box .btn:nth-child(3):hover {
     color: var(--bg-color);
 }
 
-.btn-box .btn:nth-child(2)::before {
+.btn-box .btn:nth-child(2)::before,
+.btn-box .btn:nth-child(3)::before {
     background: var(--main-color);
 }
 
@@ -594,6 +597,14 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(13) .bar span {
+    width: 30%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(14) .bar span {
+    width: 20%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(15) .bar span {
     width: 10%;
 }
 
@@ -602,15 +613,31 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 80%;
+    width: 90%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 75%;
+    width: 80%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 75%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
     width: 70%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
+    width: 50%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
+    width: 50%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(8) .bar span {
+    width: 50%;
 }
 
 /*---------------------------------------------------------------------Contact---------------------------------------------------------------------*/
@@ -723,6 +750,10 @@ input[type="number"] {
 
 .footer-text p {
     font-size: 1.6rem;
+}
+
+.footer-text span {
+    color: var(--text-color);
 }
 
 .footer-iconTop a {
