@@ -797,7 +797,7 @@ input[type="number"] {
     transition: 0.5s;
 }
 
-.footer-iconTop a i:hover {
+.footer-iconTop a:hover i {
     color: var(--main-color);
 }
 
